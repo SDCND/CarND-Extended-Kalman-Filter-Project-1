@@ -27,22 +27,12 @@ void KalmanFilter::Predict() {
 	P_ = F_ * P_ * Ft + Q_;
 }
 
-//void KalmanFilter::Update(const VectorXd &z) {
-//  /**
-//  TODO:
-//    * update the state by using Kalman Filter equations
-//  */
-//	VectorXd z_pred = H_ * x_;
-//	Update(z, z_pred);
-//}
-
-//void KalmanFilter::Update(const VectorXd &z, const VectorXd &z_pred) {
+// measurement update based on the error y
 void KalmanFilter::Update(const VectorXd &y) {
 		/**
 	TODO:
 	* update the state by using Kalman Filter equations
 	*/
-	//VectorXd y = z - z_pred;
 	MatrixXd Ht = H_.transpose();
 	MatrixXd S = H_ * P_ * Ht + R_;
 	MatrixXd Si = S.inverse();
