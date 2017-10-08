@@ -78,7 +78,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <DisableSpecificWarnings>4251;4996</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4251;4996;4800;4275</DisableSpecificWarnings>
       <PreprocessorDefinitions>_USE_MATH_DEFINES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
